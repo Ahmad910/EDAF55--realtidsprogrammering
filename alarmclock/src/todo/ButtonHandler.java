@@ -27,7 +27,7 @@ public class ButtonHandler extends Thread {
 				sd.setAlarmTime(input.getValue(), input.getAlarmFlag());
 			}
 			if (previousChoice == 2) {
-				sd.x(input.getValue());
+				sd.setTime(input.getValue());
 
 			}
 		}

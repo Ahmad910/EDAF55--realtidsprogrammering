@@ -59,7 +59,7 @@ public class SharedData {
 		}
 	}
 
-	public void x(int time){
+	public void setTime(int time){
 		mutex.take();
 		alterClockTime(time);
 		mutex.give();

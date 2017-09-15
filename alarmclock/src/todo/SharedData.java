@@ -40,7 +40,7 @@ public class SharedData {
 		
 	}
 	
-	public void setAlarmTime(int time, boolean alarmOn) {
+	public void setAlarmTime(int time) {
 		mutex.take();
 		counter = 20;
 		alarmTime = time;

@@ -1,27 +1,27 @@
 package todo;
 
-
-
 public class TimeHandler extends Thread {
+	private long targetTime;
 	private long dt;
-	private SharedData sharedData;
-	
-	public TimeHandler(SharedData sharedData){
-		dt = 0;
-		this.sharedData = sharedData;
+	private SharedData sd;
+
+	public TimeHandler(SharedData sd) {
+		super();
+		this.sd = sd;
 	}
-	
-	public void run(){
-		while(true){
-			long targetTime = System.currentTimeMillis();
+
+	public void run() {
+		targetTime = System.currentTimeMillis();
+		while (true) {
 			targetTime += 1000;
 			try {
 				sleep(1000 - dt);
-				dt = System.currentTimeMillis() - targetTime;
-				//sharedData.incrementTime();
+				dt = (System.currentTimeMillis() - targetTime);
+				sd.incrementClock();
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				return;
 			}
 		}
+
 	}
 }

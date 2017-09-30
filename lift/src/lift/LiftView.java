@@ -85,7 +85,7 @@ public class LiftView {
 				here==next) {
 			throw new Error("Illegal parameters to moveLift.");
 		}
-		basket.moveBasket(here,next);
+		basket.moveBasket(here, next);
 		try {
 			Thread.sleep(200);
 		} catch(InterruptedException e) { }

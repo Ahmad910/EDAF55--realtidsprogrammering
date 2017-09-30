@@ -16,11 +16,12 @@ public class DataMonitor1 {
 	}
 
 	public synchronized void move(int next) {
-		while (waitEntry[currentFloor] > 0 && load < 4) {
-			try {
+		try {
+			while (waitEntry[currentFloor] > 0 && load < 4) {
 				wait();
-			} catch (Throwable t) {
 			}
+		} catch (Throwable t) {
+
 		}
 		nextFloor = next;
 		notifyAll();

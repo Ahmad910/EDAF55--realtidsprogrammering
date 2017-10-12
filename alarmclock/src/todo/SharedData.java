@@ -59,7 +59,7 @@ public class SharedData {
 			hhmmss -= 6000;
 			hhmmss += 10000;
 		}
-		if (hhmmss == 235959)
+		if (hhmmss == 240000)
 			hhmmss = 0;
 		output.showTime(hhmmss);
 	}

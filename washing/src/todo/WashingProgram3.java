@@ -43,6 +43,10 @@ class WashingProgram3 extends WashingProgram {
 	/**
 	 * This method contains the actual code for the washing program. Executed
 	 * when the start() method is called.
+	 * Draining: Turn off heating and rotation. After pumping out the
+	 * water (if any), unlock the hatch. 
+	 * Note: the user should select this program
+	 *  as soon as possible after 0 (stop).
 	 */
 	protected void wash() throws InterruptedException {
 
